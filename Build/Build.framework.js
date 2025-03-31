@@ -1993,13 +1993,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4242688: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4242749: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4242813: function() {return Module.webglContextAttributes.powerPreference;},  
- 4242871: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4242926: function($0) {performance.now = function() { return $0; };},  
- 4242974: function($0) {performance.now = function() { return $0; };},  
- 4243022: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4247440: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4247501: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4247565: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4247623: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4247678: function($0) {performance.now = function() { return $0; };},  
+ 4247726: function($0) {performance.now = function() { return $0; };},  
+ 4247774: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -16299,6 +16299,9 @@ var dynCall_ffffi = Module["dynCall_ffffi"] = createExportWrapper("dynCall_ffffi
 
 /** @type {function(...*):?} */
 var dynCall_iffi = Module["dynCall_iffi"] = createExportWrapper("dynCall_iffi");
+
+/** @type {function(...*):?} */
+var dynCall_fffifi = Module["dynCall_fffifi"] = createExportWrapper("dynCall_fffifi");
 
 /** @type {function(...*):?} */
 var dynCall_fdi = Module["dynCall_fdi"] = createExportWrapper("dynCall_fdi");
