@@ -1993,13 +1993,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4247520: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4247581: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4247645: function() {return Module.webglContextAttributes.powerPreference;},  
- 4247703: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4247758: function($0) {performance.now = function() { return $0; };},  
- 4247806: function($0) {performance.now = function() { return $0; };},  
- 4247854: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4248912: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4248973: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4249037: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4249095: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4249150: function($0) {performance.now = function() { return $0; };},  
+ 4249198: function($0) {performance.now = function() { return $0; };},  
+ 4249246: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -15517,6 +15517,7 @@ var asmLibraryArg = {
   "invoke_i": invoke_i,
   "invoke_ifi": invoke_ifi,
   "invoke_ii": invoke_ii,
+  "invoke_iiffi": invoke_iiffi,
   "invoke_iifi": invoke_iifi,
   "invoke_iifii": invoke_iifii,
   "invoke_iii": invoke_iii,
@@ -17843,6 +17844,17 @@ function invoke_ddiii(index,a1,a2,a3,a4) {
   var sp = stackSave();
   try {
     return dynCall_ddiii(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiffi(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiffi(index,a1,a2,a3,a4);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
