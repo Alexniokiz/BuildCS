@@ -1993,13 +1993,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4259232: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4259293: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4259357: function() {return Module.webglContextAttributes.powerPreference;},  
- 4259415: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4259470: function($0) {performance.now = function() { return $0; };},  
- 4259518: function($0) {performance.now = function() { return $0; };},  
- 4259566: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4260192: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4260253: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4260317: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4260375: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4260430: function($0) {performance.now = function() { return $0; };},  
+ 4260478: function($0) {performance.now = function() { return $0; };},  
+ 4260526: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -15517,6 +15517,7 @@ var asmLibraryArg = {
   "invoke_i": invoke_i,
   "invoke_ifi": invoke_ifi,
   "invoke_ii": invoke_ii,
+  "invoke_iiffi": invoke_iiffi,
   "invoke_iifi": invoke_iifi,
   "invoke_iifii": invoke_iifii,
   "invoke_iii": invoke_iii,
@@ -16306,9 +16307,6 @@ var dynCall_ffffi = Module["dynCall_ffffi"] = createExportWrapper("dynCall_ffffi
 
 /** @type {function(...*):?} */
 var dynCall_iffi = Module["dynCall_iffi"] = createExportWrapper("dynCall_iffi");
-
-/** @type {function(...*):?} */
-var dynCall_fffifi = Module["dynCall_fffifi"] = createExportWrapper("dynCall_fffifi");
 
 /** @type {function(...*):?} */
 var dynCall_fdi = Module["dynCall_fdi"] = createExportWrapper("dynCall_fdi");
@@ -17858,6 +17856,17 @@ function invoke_ddiii(index,a1,a2,a3,a4) {
   var sp = stackSave();
   try {
     return dynCall_ddiii(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiffi(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiffi(index,a1,a2,a3,a4);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
